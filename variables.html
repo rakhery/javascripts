@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <head>
+        <meta charset="utf-8">
+        <script src="jstutchris.js"></script>
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+    <script>
+    // ---------- VARIABLES ----------
+    // les noms de variables ne peuvent pas commencer par un nombre, contenir des espaces, mais peuvent
+    //contenir des lettres, des chiffres, des traits de soulignement ou $ (sensibles à la casse)
+    var monNom = "Chris";
+    var monAge = 777;
+    
+    // Les variables n'ont pas de type défini, ce qui peut causer des problèmes, javascript est faiblement typé par rapport Typescript ou java 
+    monNom = 100;
+    
+    // ---------- MATH ----------
+    // document.write envoie des données au navigateur
+    document.write("5 + 4 = ", 5 + 4, "<br/>");
+    
+    // Utiliser + au lieu de , traitera tout comme une chaîne à moins que vous n'utilisiez ()
+    document.write("5 + 4 = " + (5 + 4) + "<br/>");
+    
+    document.write("5 - 4 = ", 5 - 4, "<br/>");
+    document.write("5 * 4 = ", 5 * 4, "<br/>");
+    document.write("5 / 4 = ", 5 / 4, "<br/>");
+    
+    // Reste de module d'une division
+    document.write("5 % 4 = ", 5 % 4, "<br/>");
+    
+    var maxNum = Number.MAX_VALUE;
+    
+    document.write("Max Num = ", maxNum, "<br/>");
+    document.write("Min Num = ", Number.MIN_VALUE, "<br/>");
+    
+    // Les nombres ont 16 chiffres de précision
+    precisionTest = 0.1000000000000001;
+    document.write(precisionTest + 0.1000000000000001, "<br/>");
+    
+    // Arrondissez le nombre à 2 décimales
+    var balance = 1563.87;
+    document.write("Monthly payment : ", (balance / 12).toFixed(2), "<br />");
+    
+    var randNum = 5;
+    
+    // Raccourci pour ajouter 1
+    document.write("randNum++ = ", randNum++, "<br/>");
+    document.write("++randNum = ", ++randNum, "<br/>");
+    
+    // Il en est de même pour -
+    document.write("randNum-- = ", randNum--, "<br/>");
+    document.write("--randNum = ", --randNum, "<br/>");
+    
+    // Effectuer un calcul sur une valeur et attribuer le résultat
+    document.write("randNum += 5 = ", randNum += 5, "<br/>");
+    document.write("randNum -= 5 = ", randNum -= 5, "<br/>");
+    document.write("randNum *= 5 = ", randNum *= 5, "<br/>");
+    document.write("randNum /= 5 = ", randNum /= 5, "<br/>");
+    
+    // Ordre des opérations
+    document.write("3 + 2 * 5 = ", 3 + 2 * 5, "<br/>");
+    document.write("(3 + 2) * 5 = ", (3 + 2) * 5, "<br/>");
+    
+    // Math propriétés et méthodes
+    document.write("Math.E = ", Math.E, "<br/>");
+    document.write("Math.PI = ", Math.PI, "<br/>");
+    
+    document.write("Math.abs(-8) = ", Math.abs(-8), "<br/>");
+    document.write("Math.cbrt(1000) = ", Math.cbrt(1000), "<br/>");
+    document.write("Math.ceil(6.45) = ", Math.ceil(6.45), "<br/>");
+    document.write("Math.floor(6.45) = ", Math.floor(6.45), "<br/>");
+    document.write("Math.round(6.45) = ", Math.round(6.45), "<br/>");
+    document.write("Math.log(10) = ", Math.log(10), "<br/>"); // Natural log
+    document.write("Math.log10(10) = ", Math.log10(10), "<br/>"); // Base 10 log
+    document.write("Math.max(10,5) = ", Math.max(10,5), "<br/>");
+    document.write("Math.min(10,5) = ", Math.min(10,5), "<br/>");
+    document.write("Math.pow(4,2) = ", Math.pow(4,2), "<br/>");
+    document.write("Math.sqrt(1000) = ", Math.sqrt(1000), "<br/>");
+    
+    document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) + 1), "<br/>");
+    
+    // Convertir des chaînes en nombres
+    document.write("Chaîne convertie : ", Number("3.14"), "<br />");
+    document.write("Conversion en  Int : ", parseInt("5"), "<br />");
+    document.write("Conversion en Réel Float : ", parseFloat("5.555"), "<br />");
+</script>
+</body>
+</html>

@@ -14,6 +14,14 @@ function validateForm() {
       alert("Entrer username et password correct svp");
       return false;
     }
-    
+    //
+    const x = function (a, b) {return a * b};
+    let z = x(4, 3);
+    console.log(z);
+
+    //Constructor
+    const myFunction = new Function("a", "b", "return a * b");
+    let y = myFunction(4, 3);
+    console.log(y);
 
   } 
