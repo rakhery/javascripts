@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion exception</title>
+    <head>
+        <meta charset="utf-8">
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+    
+        <script>
+            
+</script>
+
+<!-- ---------- EXCEPTION HANDLING ---------- -->
+
+<script type="text/javascript">
+// Grâce à la gestion des exceptions, nous pouvons détecter et gérer les erreurs plutôt
+
+var clientTab = ["Tom", "Bob", "Sally", "Sue"];
+
+var getClient = function(index){
+  if(index > clientTab.length){
+    throw new RangeError("Index doit être entre  >= 0 et <= " + clientTab.length );
+  } else {
+    return clientTab[index];
+  }
+}
+
+try {
+  document.write("Client : ", getClient(5), "<br />");
+}
+catch(ex){
+  if (ex instanceof RangeError){
+    document.write(ex.message + "<br />");
+  }
+}
+  
+     
+        </script>
+</body>
+</html>
