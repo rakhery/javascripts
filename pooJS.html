@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <head>
+        <meta charset="utf-8">
+        <script src="jstutchris.js"></script>
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+    
+        
+  <!-- ---------- POO JAVASCRIPT ---------- -->
+
+<script type="text/javascript">
+
+// Créer un objet client en définissant les attributs de Agent Smith
+// La variable est une référence à l'objet en mémoire
+var client = {
+  nom: "Agent Smith",
+  rue: "123 Jean Jaures",
+  ville: "Tours",
+  pays: "FR",
+  email: "asmith@gmail.com",
+  credit: 120.50,
+  payer: function(p){
+    this.credit -= p;
+  },
+  ajouter: function(c){
+    this.credit += c;
+  }
+};
+
+// Nom
+document.write("Nom du client : ", client.nom, "<br />");
+
+//Modifier adresse
+client.rue = "215 Paris ";
+document.write("Modifer adresse : ", client.rue, "<br />");
+
+// Ajouter une propriété au client
+client.id = "12344";
+document.write("Client id : ", client.id, "<br />");
+
+// Effacer une propriété
+delete client.id;
+
+// @ToString avec java  
+for (var prop in client) {
+    if (client.hasOwnProperty(prop)) {
+        document.write(prop, "<br />");
+    }
+}
+
+// Verifier si une propriété est un objet 
+document.write("nom dans client : ", "nom" in client, "<br />");
+
+// Intéract° avec l'objet en utilisant une fonction 
+function getInfo(client){
+  return client.nom + " habite   " + client.rue + " de " + client.ville + " " + client.pays + " email : " + client.email + " possède un crédit " + client.credit;
+}
+
+document.write(getInfo(client), "<br />");
+
+// Call object methods
+client.ajouter(20.50);
+client.payer(10.00);
+
+document.write(getInfo(client), "<br />");
+
+// Créer un constructeur d'objet
+function Client(nom, rue, ville, pays, email, credit){
+  this.nom = nom;
+  this.rue = rue;
+  this.ville = ville;
+  this.pays = pays;
+  this.email = email;
+  this.credit = credit;
+
+  this.payer = function(s){
+    this.credit -= s;
+  };
+  this.ajouter = function(a){
+    this.balance += a;
+  };
+}
+
+var client2 = new Client("Sally Smith", "1O RUE", "Tauxigny", "FR", "ssmith@aol.com", 0.00);
+
+client2.ajouter(15.50);
+
+// Définir une propriété prototype partagée pour tous les objets
+Client.prototype.estCreditDisponible = true;
+
+// Nous définissons des méthodes prototypes partagées par chaque objet créé
+Client.prototype.toString = function(){
+    return this.nom + " habite sur la rue " + this.rue + " à " + this.ville + " " + this.pays + " email : " + this.email + " and possède crédit de "  + " Crédit : " + this.estCreditDisponible;
+};
+
+document.write(client2.toString());
+</script>
+    
+</body>
+</html>
