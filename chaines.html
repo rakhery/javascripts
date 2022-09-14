@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <head>
+        <meta charset="utf-8">
+        <script src="jstutchris.js"></script>
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+       
+        <script>
+      
+      // ---------- STRINGS/CHAINES ----------
+var m2iSt = "Ma formation M2I propose " + "java EE POEC " + "et javascript et ensuite.";
+document.write("m2iST teste=",m2iSt +"<br/>");
+// String length , obtenir la longeur du chaine 
+document.write("Taille de la chaine : ", m2iSt.length + "<br/>");
+document.write("l\'Index pour \"M2I\" : ", m2iSt.indexOf("M2I"), "<br/>");
+
+// Renvoie la valeur en utilisant un début et une fin
+document.write(m2iSt.slice(19, 23) + "<br/>");
+
+// Renvoie tout après l'index de départ Formatrice Sonia
+document.write(m2iSt.slice(19) + "<br/>");
+
+// Renvoie la valeur en utilisant l'index de début et la longueur
+document.write(m2iSt.substr(19, 4) + "<br/>");
+
+// Remplacer une chaîne
+document.write(m2iSt.replace("and on", "forever") + "<br/>");
+
+// Get character at an index # Obtenez du caractère A
+document.write("At Index 2 : ", m2iSt.charAt(2) + "<br/>");
+
+// Split a string into an array
+var randStrArray = m2iSt.split(" ");
+
+// Trim white space
+randStr = m2iSt.trim();
+
+// Convert to uppercase
+document.write(m2iSt.toUpperCase() + "<br/>");
+
+// Convert to lowercase
+document.write(m2iSt.toLowerCase() + "<br/>");
+
+// Styling with JS
+var strToStyle = "Une chaine aléatoire ";
+
+document.write("Big : ", strToStyle.big(), "<br />");
+document.write("Bold : ", strToStyle.bold(), "<br />");
+document.write("Font Color : ", strToStyle.fontcolor("blue"), "<br />");
+document.write("Font Size : ", strToStyle.fontsize("8em"), "<br />");
+document.write("Italics : ", strToStyle.italics(), "<br />");
+document.write("Google : ", strToStyle.link("http://google.com"), "<br />");
+document.write("Small : ", strToStyle.small(), "<br />");
+document.write("Strike : ", strToStyle.strike(), "<br />");
+document.write("Sub : ", strToStyle.sub(), "<br />");
+document.write("Sup : ", strToStyle.sup(), "<br />");
+
+        </script>
+</body>
+</html>
