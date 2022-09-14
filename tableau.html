@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <head>
+        <meta charset="utf-8">
+        <script src="jstutchris.js"></script>
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+    
+        <script>
+        // ---------- ARRAYS/TABLEAUX ----------
+// Les tableaux ont des tailles variables et peuvent contenir plusieurs types dansJavascript
+var rakChris = ["Rak  Chris", "123 Rue de la Paix", 77.77];
+
+// Accéder au premier élément du tableau
+document.write("1er Element : ", rakChris[0], "<br />");
+
+// Ajout une valeur
+rakChris[3] = "crakoto@protonmail.com";
+
+// Remplacez l'index 2 et placez tout le reste après l'index 2 sans
+// écrasement (Mettez 0 pour le deuxième paramètre à ne pas écraser)
+rakChris.splice(2, 1, "Miami", "FL");
+
+// Supprimer le 4ème élément d'index
+rakChris.splice(4,1);
+
+// Conversion un tableau en Chaine ( on peut aussi utiliser  toString())
+document.write("Array : ", rakChris.valueOf(), "<br />");
+
+// Convertir un tableau en chaîne avec séparateur
+document.write("Array : ", rakChris.join(", "), "<br />");
+
+// Effacer un index
+delete rakChris[3];
+
+// Trier un tableau   (reverse() pour inverse sort)
+// Marche aussi pour les chaines
+rakChris.sort();
+
+// Trier un nombre
+var numbers = [4,3,9,1,20,43];
+
+// Tri décroissant retour y - x
+numbers.sort(function(x,y){ return x - y });
+document.write("Num Array : ", numbers.toString(), "<br />");
+
+// Combiner dees tableaux
+var combinedArray = numbers.concat(rakChris);
+
+// Supprimer le dernier élément
+rakChris.pop();
+
+// Ajouter des éléments à la fin
+rakChris.push("0247000", "FR");
+
+// Supprimer le premier élément
+rakChris.shift();
+
+//Ajoute un élément au premier index
+rakChris.unshift("Tom Smith");
+
+for (var i = 0; i < rakChris.length; i++) {
+  document.write(rakChris[i], "<br />");
+}
+    
+        </script>
+</body>
+</html>
