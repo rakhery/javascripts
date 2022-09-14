@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <head>
+        <meta charset="utf-8">
+        <script src="jstutchris.js"></script>
+        <!-- Fast inline CSS Style-->
+        <style type="text/css">
+          body {font-size: 1.6em;}
+          .hidden {display:none;}
+          .show {display:inline !important;}
+          button {
+            border: 2px solid black; background: #E5E4E2;
+            font-size: .5em; font-weight: bold; color: black;
+            padding: .8em 2em;
+            margin-top: .4em;
+          }
+        </style>
+    
+      </head>
+</head>
+<body>
+    
+        <script>
+        // ---------- DATE ----------
+// Get a Date object
+var aujourdhui = new Date();
+
+document.write("Date : ", aujourdhui.getDate(), "<br />");
+document.write("Mois : ", aujourdhui.getMonth(), "<br />");
+document.write("Jour : ", aujourdhui.getDay(), "<br />");
+document.write("Année : ", aujourdhui.getFullYear(), "<br />");
+document.write("Temps : ", aujourdhui.getHours(), ":", aujourdhui.getMinutes(),
+  ":", aujourdhui.getSeconds(), ":", aujourdhui.getMilliseconds(), "<br />");
+
+// Créer un objet Date pour mon anniversaire
+var christ = new Date("December 21, 2015");
+
+var msForBD = christ.getTime();
+var timeNow = aujourdhui.getTime();
+var tilMyBD = msForBD - timeNow;
+
+document.write("Days til Birthday : ", tilMyBD / (1000 * 60 * 60 * 24), "<br />");
+    
+        </script>
+</body>
+</html>
